@@ -1,13 +1,14 @@
-/*  USAGE:
- * ./passgen [-n/-uu/-us/-len]
- *  --use_nums, -use_nums, -un Use numbers in the generator (on by default)
-    --use_upper, -use_upper, -uu Use uppercase in the generator (on by default)
-    --use_symbols, -use_symbols, -us Use symbols in the generator (on by
- default)
-    --length=x, -length=x, -len=x Generate specific length password (16 by
- default)
+/* USAGE:
+  ./passgen [-n/-uu/-us/-len]
+    --use_nums, -use_nums, -un Use numbers in the generator
+    --use_upper, -use_upper, -uu Use uppercase in the generator
+    --use_symbols, -use_symbols, -us Use symbols in the generator
+     --length=x, -length=x, -len=x Generate specific length password
     --seed=x, -seed=x, -s=x Use specific seed
-    --output=x, -out=x, -o=x Output to specific location*/
+    --output=x, -out=x, -o=x Output to specific location
+    --default, -default, -d Use defaults (nums/upper/symbols/len=16)
+    --help, -help, -h Output help/options
+*/
 
 #include <stdio.h>
 #include <string.h>
@@ -30,6 +31,7 @@ unsigned long hash(unsigned char* str) {
 
 int main(int argc, const char** argv) {
   if (argc == 1) {
+  help:
     printf("USAGE: \n"
            "--use_nums, -use_nums, -n         Use numbers in the generator (on "
            "by default)\n"
@@ -79,6 +81,10 @@ int main(int argc, const char** argv) {
         upper   = 1;
         if (!is_length_set)
           length = 16;
+      }
+    } else if (*obv == 'h') {
+      if (!strcmp(obv, "help") || !strcmp(obv, "h")) {
+        goto help;
       }
     } else {
       char* delim = "=";

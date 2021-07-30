@@ -21,6 +21,8 @@ Usage:
   --length=x, -length=x, -len=x Generate specific length password (16 by default)
   --seed=x, -seed=x, -s=x Use specific seed
   --output=x, -out=x, -o=x Output to specific location
+  --default, -default, -d Use defaults 
+  --help, -help, -h Output this help info
 ```
 
 ### Building
