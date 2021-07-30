@@ -10,15 +10,7 @@
 ### About
 passgen is meant to be a simple but useful password generator that is easily deployable onto machines without many dependencies.
 
-### Building
-passgen currently just uses a makefile to compile. You can also just substitute it out for your favorite compiler call using just the `main.c` file in the `src/` directory. 
-
-Otherwise it's as easy just using: 
-```
-make
-``` 
-
-and you'll have a `passgen` executable.
+### Usage
 
 ```
 Usage:
@@ -30,3 +22,15 @@ Usage:
   --seed=x, -seed=x, -s=x Use specific seed
   --output=x, -out=x, -o=x Output to specific location
 ```
+
+### Building
+passgen currently just uses a makefile to compile. You can also just substitute it out for your favorite compiler call using just the `main.c` file in the `src/` directory. 
+
+Otherwise it's as easy just using: 
+```
+make
+``` 
+
+and you'll have a `passgen` executable.
+
+
