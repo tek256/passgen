@@ -3,7 +3,7 @@
       <b>passgen</b><br>
   	  <span font-size="16px">a cli password generator</span><br>
       <span font-size="12px">Made by <a href="http://tek256.com">Devon</a> with love.</span><br><br>
-      <span><a href="#usage">Usage</a> | <a href="https://discord.gg/KrnbKk4zpU">Discord</a> | <a href="https://github.com/sponsors/tek256">Support</a></span><br><br>
+      <span><a href="#usage">Usage</a></span><br><br>
     </p>
 </div>
 
